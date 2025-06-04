@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eid Mubarak!</title>
     <style>
-        /* Google Fonts Import */
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
 
-        /* CSS Variables */
         :root {
             --primary-color: #00ffcc; /* Neon teal/green */
             --secondary-color: #ff00ff; /* Neon pink/magenta */
@@ -19,14 +17,12 @@
             --glow-color: rgba(0, 255, 204, 0.5);
         }
 
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, var(--background-color), #3c1a54);
@@ -36,13 +32,12 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 20px; /* Original top, left, right padding */
-            padding-bottom: 80px; /* Added space for the fixed ad (adjust if ad height is different) */
+            padding: 20px; /* Original padding for sides/top */
+            padding-bottom: 70px; /* Added space for the 50px ad + 20px buffer */
             text-align: center;
             overflow-x: hidden;
         }
 
-        /* Main Container Styling */
         .container {
             background: var(--card-bg);
             backdrop-filter: blur(10px);
@@ -54,8 +49,6 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             border: 1px solid var(--card-border);
             animation: fadeInContainer 1s ease-out forwards;
-            position: relative; /* Ensure it's part of the normal flow for z-index */
-            z-index: 1; /* Below the ad */
         }
 
         @keyframes fadeInContainer {
@@ -63,7 +56,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Eid GIF Styling */
         .eid-gif {
             width: 100%;
             max-width: 300px;
@@ -79,7 +71,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* Greeting Text Styling */
         .greeting-text {
             font-family: 'Pacifico', cursive;
             font-size: 2.2em;
@@ -104,7 +95,7 @@
             to { text-shadow: 0 0 15px var(--glow-color), 0 0 25px var(--glow-color); }
         }
 
-        /* Input Field Styling */
+
         .input-field {
             width: 100%;
             padding: 12px 15px;
@@ -123,7 +114,6 @@
             box-shadow: 0 0 15px var(--secondary-color);
         }
 
-        /* Styled Button Styling */
         .styled-button {
             background: transparent;
             color: var(--primary-color);
@@ -138,7 +128,7 @@
             margin-bottom: 20px;
             position: relative;
             overflow: hidden;
-            z-index: 1; /* To be above its ::before pseudo-element */
+            z-index: 1;
         }
 
         .styled-button::before {
@@ -172,7 +162,6 @@
             box-shadow: 0 0 10px var(--primary-color);
         }
 
-        /* Custom Greeting Message Styling */
         #custom-greeting-message {
             font-size: 1.2em;
             margin-bottom: 25px;
@@ -190,7 +179,6 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* WhatsApp Button Styling */
         .whatsapp-button {
             background-color: #25D366; /* WhatsApp Green */
             color: white;
@@ -226,14 +214,11 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
-        /* Audio Controls Styling */
         .audio-controls {
             margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative; /* Ensure it's part of the normal flow for z-index */
-            z-index: 1; /* Below the ad */
         }
 
         #mute-button {
@@ -272,26 +257,7 @@
              #custom-greeting-message {
                 font-size: 1em;
             }
-             body {
-                padding-bottom: 70px; /* Adjust padding for smaller screens if ad is smaller */
-            }
         }
-
-        /* --- ADVERTISEMENT STYLES START --- */
-        #container-babc8d3c60bc588b71952795e7473976 {
-            position: fixed; /* Ad ko screen ke bottom mein fix karega */
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 99999; /* Sabse upar wali layer pe rakhega */
-            text-align: center; /* Ad content ko center karega */
-            /* Background color (agar ad load hone mein time le toh dikhega, optional) */
-            /* background-color: rgba(0,0,0,0.1); */ 
-            /* Ad ki height ad script khud control karegi, lekin aap yahan min-height set kar sakte hain */
-            min-height: 50px; /* Example: Ad ke liye kam se kam itni jagah */
-        }
-       <script async="async" data-cfasync="false" src="//pl26797783.profitableratecpm.com/babc8d3c60bc588b71952795e7473976/invoke.js"></script>
-<div id="container-babc8d3c60bc588b71952795e7473976"></div>
     </style>
 </head>
 <body>
@@ -299,7 +265,7 @@
     <div class="container">
         <img src="eid.gif" alt="Eid Festive Animation" class="eid-gif">
 
-        <p class="greeting-text">✨ Eid Mubarak! अल्लाह आपको और आपके घर वालों को सलामत रखे और यह ईद का दिन आपके जिंदगी में बार-बार आए ✨</p>
+        <p class="greeting-text">✨ Eid Mubarak! अल्लाह ताला आपको और आपके घर वालों को सही सलामत रखे ✨</p>
 
         <input type="text" id="name-input" class="input-field" placeholder="Enter your name">
 
@@ -320,15 +286,7 @@
         <button id="mute-button">🔊</button> <!-- Initial state: Unmuted -->
     </div>
 
-    <!-- --- ADVERTISEMENT SCRIPT AND CONTAINER START --- -->
-    <!-- Yah woh div hai jahan ad dikhega -->
-    <div id="container-babc8d3c60bc588b71952795e7473976"></div>
-    <!-- Yah Adsterra ka script hai jo ad ko load karega -->
-    <script async="async" data-cfasync="false" src="//pl26797783.profitableratecpm.com/babc8d3c60bc588b71952795e7473976/invoke.js"></script>
-    <!-- --- ADVERTISEMENT SCRIPT AND CONTAINER END --- -->
-
     <script>
-        // JavaScript Code
         document.addEventListener('DOMContentLoaded', () => {
             const nameInput = document.getElementById('name-input');
             const generateButton = document.getElementById('generate-button');
@@ -376,6 +334,7 @@
                     const siteUrl = window.location.href;
                     const whatsappMessage = encodeURIComponent(`${generatedMessage}\n\nSent from this Eid Greeting page: ${siteUrl}`);
                     const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
+                    // For mobile, this should open the app. For desktop, it opens WhatsApp Web.
                     window.open(whatsappUrl, '_blank');
                 }
             });
@@ -383,17 +342,28 @@
             muteButton.addEventListener('click', () => {
                 if (backgroundSong.muted) {
                     backgroundSong.muted = false;
-                    if (backgroundSong.paused) { 
-                        backgroundSong.play().catch(e => console.log("Error playing audio on unmute:", e));
-                    }
-                    muteButton.textContent = '🔊'; 
+                    backgroundSong.play(); // Try to play again if it was stopped by policy
+                    muteButton.textContent = '🔊'; // Unmuted
                 } else {
                     backgroundSong.muted = true;
-                    muteButton.textContent = '🔇'; 
+                    muteButton.textContent = '🔇'; // Muted
                 }
             });
         });
     </script>
 
+    <!-- Adsterra Ad Container - Bottom Fixed Banner -->
+    <div id="adsterra-bottom-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; z-index: 10000; background-color: transparent;">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'c7f1cd5488dfdc5692d3bb34824dd0d5',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/c7f1cd5488dfdc5692d3bb34824dd0d5/invoke.js"></script>
+    </div>
 </body>
 </html>
